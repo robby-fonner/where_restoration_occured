@@ -1,5 +1,6 @@
 ###########################################
 #
+#Robby Fonner - NMFS & Brittany King - OSU
 #Master Data Table
 # 
 #
@@ -220,62 +221,7 @@ fishpass_nb_w <- glm.nb(f4, data = stan_basin_data_w, family =binomial(link = lo
 worksites_nb_w <- glm.nb(f5, data = stan_basin_data_w, family =binomial(link = log), control = glm.control(maxit = 200))
   summary(worksites_nb_w)
   vif(worksites_nb_w)
-  
-###########################DIDNT ESTIMATE MODELS PAST HERE ##############################
-  
-  #Linear model
-  CostDep1 <- "prj_cst"
-  CostDep2 <- "riparian_cst"
-  CostDep3 <- "land_cst"
-  CostDep4 <- "instream_cst"
-  CostDep5 <- "main_cst"
-  
-  cost_f1 <- as.formula(
-    paste(CostDep1,
-          paste(Indep, collapse = "+"),
-          sep = "~"))
-  
-  cost_f2 <- as.formula(
-    paste(CostDep2,
-          paste(Indep, collapse = "+"),
-          sep = "~"))
-  
-  cost_f3 <- as.formula(
-    paste(CostDep3,
-          paste(Indep, collapse = "+"),
-          sep = "~"))
-  
-  cost_f4 <- as.formula(
-    paste(CostDep4,
-          paste(Indep, collapse = "+"),
-          sep = "~"))
-  
-  cost_f5 <- as.formula(
-    paste(CostDep5,
-          paste(Indep, collapse = "+"),
-          sep = "~"))
-  
-  
-  total_cost_ols <- lm(cost_f1, data = basin_data)
-  summary(total_cost_ols)
-  
-  rip_cost_ols <- lm(cost_f2, data = basin_data)
-  summary(rip_cost_ols)
-  
-  land_cost_ols <- lm(cost_f3, data = basin_data)
-  summary(land_cost_ols)
-  
-  instream_cost_ols <- lm(cost_f4, data = basin_data)
-  summary(instream_cost_ols)
-  
-main_cost_ols <- lm(cost_f5, data = basin_data)
-  summary(main_cost_ols)
 
-
-
-options(digits=2)
-
-stat.desc(basin_data)
 
 
   

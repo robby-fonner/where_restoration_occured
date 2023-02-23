@@ -1,7 +1,8 @@
 ###########################################
 #
-# Brittany King - OSU &
-# Robby Fonner - NOAA Fisheries
+# 
+# Robby Fonner - NOAA Fisheries 
+# & Brittany King - OSU
 #
 # Use PNSHP data to summarize salmon habitat restoration in 
 # Puget Sound during study period

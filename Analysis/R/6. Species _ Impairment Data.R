@@ -7,10 +7,6 @@
 # 
 #
 ########################################
-### RECIPES FOR GEOCOMPUTATION
-# Also see: https://geocompr.robinlovelace.net/
-###PREPARE ENVIRONMENT ==== #four = in a row creates a chunk w dropdown
-
 
 #Import ESU Critical Habitat Data (Unique HUC_12 = 411)
 esu <- st_read(here("Data/HUC6/ESU/huc6_esu-withadds-ver5-alb27.shp")) %>%
